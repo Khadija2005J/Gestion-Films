@@ -2404,11 +2404,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pc\\Desktop\\Gestion Films\\GestionFilms.Web\\GestionFilms.Web.csproj",
+      "projectUniqueName": "C:\\Users\\pc\\Gestion-Films-.Net\\GestionFilms.Web\\GestionFilms.Web.csproj",
       "projectName": "GestionFilms.Web",
-      "projectPath": "C:\\Users\\pc\\Desktop\\Gestion Films\\GestionFilms.Web\\GestionFilms.Web.csproj",
+      "projectPath": "C:\\Users\\pc\\Gestion-Films-.Net\\GestionFilms.Web\\GestionFilms.Web.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pc\\Desktop\\Gestion Films\\GestionFilms.Web\\obj\\",
+      "outputPath": "C:\\Users\\pc\\Gestion-Films-.Net\\GestionFilms.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config"
