@@ -1,0 +1,58 @@
+@model IEnumerable<GestionFilms.Web.Models.Film>
+
+@{
+    ViewData["Title"] = "Films";
+}
+
+<section class="catalog-shell mb-4">
+    <div class="catalog-header">
+        <div>
+            <span class="eyebrow">Bibliothèque</span>
+            <h1>Liste des films</h1>
+            <p>Parcourir, modifier et supprimer vos films rapidement.</p>
+        </div>
+        <div class="catalog-actions">
+            <div class="catalog-count">@Model.Count() film(s)</div>
+            <a asp-action="Create" class="btn btn-cinema">Ajouter un film</a>
+        </div>
+    </div>
+
+    <div class="catalog-table-panel">
+        <div class="catalog-table-wrap">
+            <table class="table catalog-table align-middle mb-0">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Titre)</th>
+                        <th>@Html.DisplayNameFor(model => model.Realisateur)</th>
+                        <th>@Html.DisplayNameFor(model => model.AnneeSortie)</th>
+                        <th>@Html.DisplayNameFor(model => model.Genre)</th>
+                        <th>@Html.DisplayNameFor(model => model.Note)</th>
+                        <th class="text-end">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <div class="film-title-cell">
+                                <strong>@item.Titre</strong>
+                                <span>@item.Genre</span>
+                            </div>
+                        </td>
+                        <td>@item.Realisateur</td>
+                        <td>@item.AnneeSortie</td>
+                        <td><span class="genre-pill">@item.Genre</span></td>
+                        <td><span class="rating-pill">@item.Note.ToString("0.0") / 10</span></td>
+                        <td class="text-end action-group">
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-ghost">Détails</a>
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-warning">Modifier</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">Supprimer</a>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

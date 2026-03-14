@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Accueil";
+}
+
+<section class="home-cinema mb-4">
+    <article class="home-cinema-left">
+        <h1>L'art du cinéma,<br />chez vous.</h1>
+
+        <div class="cinema-poster"></div>
+
+        <div class="home-cinema-actions">
+            <a asp-controller="Films" asp-action="Index" class="btn btn-cinema">Explorer</a>
+            <a asp-controller="Films" asp-action="Create" class="btn btn-ghost">Ajouter</a>
+        </div>
+    </article>
+
+    <article class="home-cinema-right">
+        <div class="cinema-frame">
+            <div class="cinema-single-image"></div>
+
+            <div class="cinema-info-box">
+                <h3>Gestion des films</h3>
+                <ul>
+                    <li>Titre</li>
+                    <li>Année</li>
+                    <li>Réalisateur</li>
+                    <li>Genre</li>
+                </ul>
+            </div>
+        </div>
+    </article>
+</section>

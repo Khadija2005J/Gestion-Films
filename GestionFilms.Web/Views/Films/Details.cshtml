@@ -1,0 +1,45 @@
+@model GestionFilms.Web.Models.Film
+
+@{
+    ViewData["Title"] = "Détails du film";
+}
+
+<section class="details-cinema-shell mx-auto">
+    <div class="details-cinema-card">
+        <div class="details-cinema-head">
+            <h2>🎥 Détails du film</h2>
+        </div>
+
+        <dl class="details-cinema-grid mb-0">
+            <div>
+                <dt>@Html.DisplayNameFor(model => model.Titre)</dt>
+                <dd>@Html.DisplayFor(model => model.Titre)</dd>
+            </div>
+
+            <div>
+                <dt>@Html.DisplayNameFor(model => model.Realisateur)</dt>
+                <dd>@Html.DisplayFor(model => model.Realisateur)</dd>
+            </div>
+
+            <div>
+                <dt>@Html.DisplayNameFor(model => model.AnneeSortie)</dt>
+                <dd>@Html.DisplayFor(model => model.AnneeSortie)</dd>
+            </div>
+
+            <div>
+                <dt>@Html.DisplayNameFor(model => model.Genre)</dt>
+                <dd>@Html.DisplayFor(model => model.Genre)</dd>
+            </div>
+
+            <div>
+                <dt>@Html.DisplayNameFor(model => model.Note)</dt>
+                <dd>⭐ @Model.Note.ToString("0.0")</dd>
+            </div>
+        </dl>
+
+        <div class="details-cinema-actions">
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-cinema">Modifier</a>
+            <a asp-action="Index" class="btn btn-ghost">Retour</a>
+        </div>
+    </div>
+</section>

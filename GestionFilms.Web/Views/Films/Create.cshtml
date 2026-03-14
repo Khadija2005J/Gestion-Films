@@ -1,0 +1,76 @@
+@model GestionFilms.Web.Models.Film
+
+@{
+    ViewData["Title"] = "Ajouter un film";
+}
+
+<section class="create-cinema-shell mx-auto">
+    <div class="create-cinema-card">
+        <div class="create-cinema-left">
+            <h2>🎬 Ajouter un film</h2>
+
+            <div class="create-left-top">
+                <div class="filmstrip-panel"></div>
+                <div class="poster-panel"></div>
+            </div>
+
+            <div class="synopsis-panel">
+                
+                <p>Ajoutez rapidement les informations principales de votre film avec un style cinema.</p>
+            </div>
+
+            <div class="cast-row">
+                <div class="cast-avatar cast-1"></div>
+                <div class="cast-avatar cast-2"></div>
+                <div class="cast-avatar cast-3"></div>
+            </div>
+        </div>
+
+        <div class="create-cinema-right">
+            <form asp-action="Create" class="create-form">
+                <div asp-validation-summary="ModelOnly" class="text-warning mb-3"></div>
+
+                <div class="create-form-grid">
+                    <div>
+                        <label asp-for="Titre" class="form-label"></label>
+                        <input asp-for="Titre" class="form-control create-input" placeholder="Entrer le titre..." />
+                        <span asp-validation-for="Titre" class="text-warning"></span>
+                    </div>
+
+                    <div>
+                        <label asp-for="Realisateur" class="form-label"></label>
+                        <input asp-for="Realisateur" class="form-control create-input" placeholder="Entrer le réalisateur..." />
+                        <span asp-validation-for="Realisateur" class="text-warning"></span>
+                    </div>
+
+                    <div>
+                        <label asp-for="AnneeSortie" class="form-label"></label>
+                        <input asp-for="AnneeSortie" class="form-control create-input" />
+                        <span asp-validation-for="AnneeSortie" class="text-warning"></span>
+                    </div>
+
+                    <div>
+                        <label asp-for="Genre" class="form-label"></label>
+                        <input asp-for="Genre" class="form-control create-input" placeholder="Genre" />
+                        <span asp-validation-for="Genre" class="text-warning"></span>
+                    </div>
+
+                    <div>
+                        <label asp-for="Note" class="form-label"></label>
+                        <input asp-for="Note" class="form-control create-input" />
+                        <span asp-validation-for="Note" class="text-warning"></span>
+                    </div>
+                </div>
+
+                <div class="create-actions">
+                    <button type="submit" class="btn btn-cinema">Enregistrer</button>
+                    <a asp-action="Index" class="btn btn-ghost">Retour</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
