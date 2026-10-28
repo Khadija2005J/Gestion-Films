@@ -1,0 +1,20 @@
+## .NET build output
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+.vs/
+
+## Local databases / secrets
+*.db
+*.mdf
+*.ldf
+appsettings.Development.json
+
+## OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
